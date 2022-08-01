@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/80a1447cb8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assest/css/style.css">
+    <title>Potfolio</title>
+</head>
+<body>
+    <section id="header">
+        <div class="container">
+            <div class="nav">
+                <img class="logo" src="assest/images/logo.png" alt="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolil</a></li>
+                    <li><a href="#">Contract</a></li>
+                </ul>
+            </div>
+            <div class="header-text">
+                <p>Fontend Developer</p>
+                <h1>Hi, I'm <span>Rakib</span><br> Hossain From Bangladesh</h1>
+            </div>
+        </div>
+    </section>
+    <!-- header end -->
+    <!-- about start -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assest/images/user.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1>About me</h1>
+                    <p>Assalamu-alaikum,To serve a world-class organization with my knowledge and skills, to learn and grow as a part 
+                        of the organization, and to engage myself in such a position so that I could be able to express 
+                        my honesty, sincerity, utilize my creativity and hard-working ability to build up my career and 
+                        also to serve my nation as well as Bangladesh.</p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skilles')">Skilles</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                    </div>
+                    <div class="tab-content active-tag" id="skilles">
+                        <li><span>Javascript/React JS</span><br>Fontend Developer</li>
+                        <li><span>HTML/CSS/bootstrap/CSS-Grid</span><br>Responsive Web Design</li>
+                        <li><span>Java</span><br>Basic</li>
+                    </div>
+                    <div class="tab-content " id="experience">
+                        <li><span>2021-july-current</span><br>Javascript and React JS</li>
+                        <li><span>2020-Septembor</span><br>WordPress,Mysqule</li>
+                        <li><span>2019</span><br>HTML/CSS/jquery</li>
+                        <li><span>2020</span><br>java</li>
+                    </div>
+                    <div class="tab-content " id="education">
+                        <li><span>Diploma in Engineering</span><br>Computer technology</li>
+                        <li><span>attachment training</span><br>Bdtask | Best Software Development Company</li>
+                        <li><span>H.S.C</span><br>Humanities branch</li>
+                        <li><span>S.S.C</span><br>Humanities branch</li>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+            <!-- about end -->
+            <!-- service start -->
+            <section class="services">
+                <div class="container">
+                    <h1 class="sub-title">My Services</h1>
+                    <div class="services-list">
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Web Design</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, voluptatem!</p>
+                            <a href="#">learn more</a>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-sketch"></i>
+                            <h2>Web Design</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, voluptatem!</p>
+                            <a href="#">learn more</a>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-app-store"></i>
+                            <h2>Web Design</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, voluptatem!</p>
+                            <a href="#">learn more</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- service end -->
+            <!-- portfolio start -->
+            <section id="portfolio">
+                <div class="container">
+                    <h1 class="sub-title">My Work</h1>
+                    <div class="work-list">
+                        <div class="work">
+                            <img src="assest/images/work-1.png" alt="">
+                        </div>
+                        <div class="work">
+                            <img src="assest/images/work-2.png" alt="">
+                        </div>
+                        <div class="work">
+                            <img src="assest/images/work-3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- portfolio end -->
+        <script>
+            let tabLinks = document.getElementsByClassName('tab-links')
+            let tabcontents = document.getElementsByClassName('tab-content')
+
+            function opentab(tabname){
+                for(tabLink of tabLinks){
+                    tabLink.classList.remove('active-link')
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove('active-tag')
+                }
+           event.currentTarget.classList.add('active-link');
+           document.getElementById(tabname).classList.add('active-tag')
+        }
+     </script>
+</body>
+</html>
