@@ -13,13 +13,15 @@
         <div class="container">
             <div class="nav">
                 <img class="logo" src="assest/images/logo.png" alt="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolil</a></li>
                     <li><a href="#">Contract</a></li>
+                    <i class="fa-solid fa-circle-xmark nicon" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars nicon" onclick="openmenu()"></i>
             </div>
             <div class="header-text">
                 <p>Fontend Developer</p>
@@ -42,23 +44,23 @@
                         my honesty, sincerity, utilize my creativity and hard-working ability to build up my career and 
                         also to serve my nation as well as Bangladesh.</p>
                     <div class="tab-title">
-                        <p class="tab-links active-link" onclick="opentab('skilles')">Skilles</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" data-tab-target="#skills" >Skilles</p>
+                        <p class="tab-links" data-tab-target="#experience">Experience</p>
+                        <p class="tab-links" data-tab-target="#education">Eduation</p>
 
                     </div>
-                    <div class="tab-content active-tag" id="skilles">
+                    <div class="tab-content active-tag" data-tab-content  id="skills">
                         <li><span>Javascript/React JS</span><br>Fontend Developer</li>
                         <li><span>HTML/CSS/bootstrap/CSS-Grid</span><br>Responsive Web Design</li>
                         <li><span>Java</span><br>Basic</li>
                     </div>
-                    <div class="tab-content " id="experience">
+                    <div class="tab-content " data-tab-content id="experience">
                         <li><span>2021-july-current</span><br>Javascript and React JS</li>
                         <li><span>2020-Septembor</span><br>WordPress,Mysqule</li>
                         <li><span>2019</span><br>HTML/CSS/jquery</li>
                         <li><span>2020</span><br>java</li>
                     </div>
-                    <div class="tab-content " id="education">
+                    <div class="tab-content " data-tab-content id="education">
                         <li><span>Diploma in Engineering</span><br>Computer technology</li>
                         <li><span>attachment training</span><br>Bdtask | Best Software Development Company</li>
                         <li><span>H.S.C</span><br>Humanities branch</li>
@@ -106,19 +108,66 @@
                     <div class="work-list">
                         <div class="work">
                             <img src="assest/images/work-1.png" alt="">
+                            <div class="layer">
+                                <h3>Web Desing</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, explicabo.</p>
+                                <i class="fa-solid fa-face-smile"></i>
+                            </div>
                         </div>
                         <div class="work">
                             <img src="assest/images/work-2.png" alt="">
+                            <div class="layer">
+                                <h3>Web Desing</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, explicabo.</p>
+                                <i class="fa-brands fa-invision"></i>
+                            </div>
                         </div>
                         <div class="work">
                             <img src="assest/images/work-3.png" alt="">
+                            <div class="layer">
+                                <h3>Web Desing</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, explicabo.</p>
+                                <i class="fa-brands fa-adn"></i>
+                            </div>
                         </div>
+                    </div>
+                    <button class="btn">See more</button>
+                </div>
+            </section>
+            <!-- portfolio end -->
+            <!-- contact start -->
+            <section id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class="sub-title">Contact</h1>
+                            <P><i class="fa-solid fa-paper-plane"></i>rakibjp431@gmail.com</P>
+                            <p> <i class="fa-solid fa-phone"></i>01725197531</p>
+                            <p> <i class="fa-solid fa-phone"></i>01975197532</p>
+                            <div class="socail-icon">
+                                <a href="https://www.facebook.com/profile.php?id=100009844718833"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://github.com/rakibhossain431"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/rakib-hossain-71a307204/"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/robul0/"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                            <a href="assest/images/rakib 1 cv.pdf"><button class="btn btn2">Download CV</button></a>
+                        </div>
+                        <div class="contact-right">
+                            <form>
+                                <input class="input-name" type="text" name="Name" placeholder="Your Name">
+                                <input class="input-email" type="email" name="email" placeholder="Your Email">
+                                <textarea class="input-massage" name="Message"rows="6" placeholder="Your Massage"></textarea>
+                                <button type="submit" class="btn btn2">Submit</button>
+                            </form>
+                        </div>  
+
                     </div>
                 </div>
 
             </section>
-            <!-- portfolio end -->
-        <script>
+            <!-- contact end -->
+            <!-- <script src="app.js"></script> -->
+        <!-- <script>
             let tabLinks = document.getElementsByClassName('tab-links')
             let tabcontents = document.getElementsByClassName('tab-content')
 
@@ -131,6 +180,15 @@
                 }
            event.currentTarget.classList.add('active-link');
            document.getElementById(tabname).classList.add('active-tag')
+        }
+     </script> -->
+     <script>
+        const sidemenu = document.getElementById('sidemenu')
+        function openmenu(){
+            sidemenu.style.right ='0';
+        }
+        function closemenu(){
+            sidemenu.style.right = '-200px';
         }
      </script>
 </body>

@@ -1,22 +1,46 @@
-let tabLinks = document.querySelectorAll(".tab-links")
-let tabContent = document.querySelectorAll(".tab-content")
-// let activeLink = document.getElementsByClassName(".active-link")
-// let activetab = document.getElementsByClassName(".active-tab")
+let tabLinks = document.querySelectorAll("[data-tab-target]");
+const tabContents = document.querySelectorAll("[data-tab-content]");
 
 
-// function opentab(tabname){
-//     for(let tabLink of tabLinks){
-//          tabLink.classlist.remove("activeLink");
+// let tabcontents = document.querySelectorAll('.tab-content')
+
+// tabLinks.addEventLisner('click', ()=> {
+//     console.log(tabLinks.classList)
+// })
+// function rakib(tabname){
+//     for(tabLinks of tabLinks){
+//        tabLinks.classList.remove('active-link')
 //     }
-//     for(let tabContents of tabContent){
-//        tabContents.classlist.remove("activetab");
+//     for(tabcontents of tabcontents){
+//         tabcontents.classList.remove('active-tag')
 //     }
+//     Event.currentTarget.classList.add('active-link');
+//     document.getElementById(tabname).classList.add('active-tag')
 
 // }
-// opentab()
+// rakib()
 
-tabLinks.forEach(tabLinks =>{
-    tabLinks.addEventListener('click', function(){
-        tabLinks.forEach(btn =>tabLinks.classList.remove('active-link'))
+// tabLinks.addEventLisener('click', rakib)
+
+/* 
+function tabOpen (rakib) {
+    for(tabLinks of tabLinks){
+       console( rakib.terget)
+     }
+} */
+
+tabLinks.forEach(tab => {
+  tab.addEventListener("click", ()=> {
+    const target = document.querySelector(tab.dataset.tabTarget)
+    tabContents.forEach(tabContent => {
+      tabContent.classList.remove(".active-link")
     })
+
+    tabLinks.forEach(tab => {
+      tab.classList.remove(".active-link")
+    })
+    tab.classList.add(".active-link")
+    target.classList.add(".active-link")
+
+  })
 })
