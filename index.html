@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://kit.fontawesome.com/80a1447cb8.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/80a1447cb8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assest/fontqwesome/fontawesome.min.css">
     <link rel="stylesheet" href="assest/fontqwesome/all.min.css">
     <link rel="stylesheet" href="assest/css/style.css">
@@ -28,7 +28,7 @@
             </div>
             <div class="header-text">
                 <p>Fontend Developer</p>
-                <h1>Hi, I'm <span>Rakib</span><br> Hossain From Bangladesh</h1>
+                <h1>Hi, I'm <span class="auto-type"></span><br>  Hossain From Bangladesh</h1>
             </div>
         </div>
     </section>
@@ -47,12 +47,12 @@
                         my honesty, sincerity, utilize my creativity and hard-working ability to build up my career and 
                         also to serve my nation as well as Bangladesh.</p>
                     <div class="tab-title">
-                        <p class="tab-links active-link" data-tab-target="#skills" >Skilles</p>
+                        <p class="tab-links active " data-tab-target="#skills" >Skilles</p>
                         <p class="tab-links" data-tab-target="#experience">Experience</p>
                         <p class="tab-links" data-tab-target="#education">Eduation</p>
 
                     </div>
-                    <div class="tab-content active-tag" data-tab-content  id="skills">
+                    <div class="tab-content active active-tag" data-tab-content  id="skills">
                         <li><span>Javascript/React JS</span><br>Fontend Developer</li>
                         <li><span>HTML/CSS/bootstrap/CSS-Grid</span><br>Responsive Web Design</li>
                         <li><span>Java</span><br>Basic</li>
@@ -95,7 +95,7 @@
                         </div>
                         <div>
                             <i class="fa-brands fa-app-store"></i>
-                            <h2>Web Design</h2>
+                            <h2>Lending Page</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, voluptatem!</p>
                             <a href="#">learn more</a>
                         </div>
@@ -252,30 +252,16 @@
 
             </section>
             <!-- contact end -->
-            <!-- <script src="app.js"></script> -->
-        <!-- <script>
-            let tabLinks = document.getElementsByClassName('tab-links')
-            let tabcontents = document.getElementsByClassName('tab-content')
-
-            function opentab(tabname){
-                for(tabLink of tabLinks){
-                    tabLink.classList.remove('active-link')
-                }
-                for(tabcontent of tabcontents){
-                    tabcontent.classList.remove('active-tag')
-                }
-           event.currentTarget.classList.add('active-link');
-           document.getElementById(tabname).classList.add('active-tag')
-        }
-     </script> -->
-     <script>
-        const sidemenu = document.getElementById('sidemenu')
-        function openmenu(){
-            sidemenu.style.right ='0';
-        }
-        function closemenu(){
-            sidemenu.style.right = '-200px';
-        }
-     </script>
+            <script src="app.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+                <script>
+                       var typed = new Typed('.auto-type', {
+                         strings: ["Rakib", "Fontend Developer", ],
+                         typeSpeed: 100,
+                         backSpeed: 100,
+                         loop: true
+                        });
+                </script>
+        
 </body>
 </html>

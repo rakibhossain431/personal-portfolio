@@ -71,9 +71,15 @@ a{
 }
 /* header end */
 /* about start */
+[data-tab-content]{
+    display: none;
+}
 #about{
     padding: 80px 0;
     color: #ababab;
+}
+.active[data-tab-content]{
+    display: block;
 }
 .row{
     display: flex;
@@ -117,7 +123,7 @@ a{
     transform: 0.5s;
 
 }
-.tab-links.active-link::after{
+.tab-links.active::after{
     width: 50%;
 }
 .tab-content li {
@@ -128,12 +134,12 @@ a{
     color: #b54769;
     font-size: 14px;
 }
-.tab-content{
+/* .tab-content{
     display: none;
 }
 .tab-content.active-tag{
     display:block
-}
+} */
 /* end about */
 /* skile start */ 
 .box-container{
