@@ -100,6 +100,7 @@ a{
     font-size: 40px;
     font-weight: 600px;
     color: #fff;
+    margin-bottom: 12px;
 }
 .tab-title{
     display: flex;
@@ -162,14 +163,18 @@ a{
 }
 .skills .box-container .box h3 {
     color: #fff;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     font-weight: normal;
+}
+.box:hover{
+    transform: translateY(-10px);
 }
 /* skile end */ 
 /* start services */
 .sub-title{
     font-size: 40px;
     font-weight: 600px;
+    margin-bottom: 15px;
 }
 .services{
     padding: 30px 0;
@@ -327,6 +332,7 @@ a{
 }
 .btn.btn2{
     margin-left: 0;
+    display: inline-block;
 }
 .contact-right {
 }
@@ -352,6 +358,8 @@ form input, form textarea{
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(../images/phone-background.png);
+        height: 100%;
+        display: block;
     }
     .header-text{
         margin-top: 100%;
